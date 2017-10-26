@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 files:
 files:
-  - source: hosting.json
-    destination: /webapps
+  - source: /
+    destination: /trinimbus-app
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
