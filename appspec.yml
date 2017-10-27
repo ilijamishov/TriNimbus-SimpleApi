@@ -9,11 +9,11 @@ permissions:
       - file
 files:
   - source: /
-    destination: /home/ubuntu/deployment/app
+    destination: /home/ubuntu/deployment/app/
 hooks:
   BeforeInstall:
-    - location: /scripts/before_install.sh
+    - location: scripts/before_install.sh
   AfterInstall:
-    - location: /scripts/restore_and_build.sh
-    - location: /scripts/db_setup.sh
-    - location: /scripts/publish_and_run.sh
+    - location: scripts/restore_and_build.sh
+    - location: scripts/db_setup.sh
+    - location: scripts/publish_and_run.sh
