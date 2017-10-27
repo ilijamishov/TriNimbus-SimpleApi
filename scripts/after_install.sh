@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "before install"
+echo "after install"

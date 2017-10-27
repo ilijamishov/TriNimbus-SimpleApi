@@ -9,6 +9,11 @@ hooks:
     - location: scripts/before_install.sh
   AfterInstall:
     - location: scripts/after_install.sh
+    - location: scripts/restore_and_build.sh -h trinimbus-app
+      timeout: 180
+    - location: scripts/db_setup.sh -h trinimbus-app
+      timeout: 180    
+    - location: scripts/publish_and_run.sh -h trinimbus-app
       timeout: 180
   ApplicationStart:
     - location: scripts/db_setup.sh
