@@ -30,8 +30,15 @@ namespace TriNimbus_SimpleAPI
         {
             services.AddMvc();
 
-            var connection = Configuration.GetSection("Data").GetSection("ConnectionString").Value;  
-            services.AddDbContext<AccountContext>(options => options.UseNpgsql(connection));
+            //var connection = Configuration.GetSection("Data").GetSection("ConnectionString").Value;
+            var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+            var dbPort = Environment.GetEnvironmentVariable("DB_PORT");
+            var dbUser = Environment.GetEnvironmentVariable("DB_USER");
+            var dbPass = Environment.GetEnvironmentVariable("DB_PASS");
+            var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+
+            var connectionStr = string.Format("Host={0};Port={1};User ID={2};Password={3};Database={4};Pooling=true;", dbHost, dbPort, dbUser, dbPass, dbName);
+            services.AddDbContext<AccountContext>(options => options.UseNpgsql(connectionStr));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
