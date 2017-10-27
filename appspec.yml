@@ -1,13 +1,15 @@
 version: 0.0
 os: linux
 permissions:
-  - object: /home/ec2-user
-    pattern: "/app"
+  - object: /home/ec2-user/deployment
+    pattern: "*"
     owner: ec2-user
     mode: 755
+    type:
+      - directory
 files:
   - source: /
-    destination: /home/ec2-user/app
+    destination: /home/ec2-user/deployment/app
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
