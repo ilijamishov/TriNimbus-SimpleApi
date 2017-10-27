@@ -3,7 +3,7 @@ os: linux
 files:
 files:
   - source: /
-    destination: /trinimbus-app
+    destination: ~/app
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
