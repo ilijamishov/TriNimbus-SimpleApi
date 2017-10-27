@@ -38,6 +38,7 @@ namespace TriNimbus_SimpleAPI
             var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 
             var connectionStr = string.Format("Host={0};Port={1};User ID={2};Password={3};Database={4};Pooling=true;", dbHost, dbPort, dbUser, dbPass, dbName);
+            
             services.AddDbContext<AccountContext>(options => options.UseNpgsql(connectionStr));
         }
 
