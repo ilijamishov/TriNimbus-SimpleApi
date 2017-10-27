@@ -3,7 +3,7 @@ os: linux
 files:
 files:
   - source: /
-    destination: ~/app
+    destination: /home/ec2-user/app
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
