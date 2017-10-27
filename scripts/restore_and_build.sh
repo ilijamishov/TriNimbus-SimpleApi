@@ -2,5 +2,5 @@
 
 cd /home/ubuntu/deployment/app
 
-dotnet restore .
-dotnet build .
+dotnet restore
+dotnet build
