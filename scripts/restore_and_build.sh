@@ -2,5 +2,6 @@
 
 export NUGET_PACKAGES=/home/ubuntu/.nuget/packages
 
-dotnet restore /home/ubuntu/deployment/app
-dotnet build /home/ubuntu/deployment/app
+cd /home/ubuntu/deployment/app
+dotnet restore
+dotnet build
