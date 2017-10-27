@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/deployment/app
+cd /home/ubuntu/deployment/app
 
 dotnet restore
 dotnet build

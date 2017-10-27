@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd ~/deployment/app
+cd /home/ubuntu/deployment/app
 dotnet publish --output publish
 
-cd ~/deployment/app/publish
+cd /home/ubuntu/deployment/app/publish
 sudo dotnet TriNimbus-SimpleAPI

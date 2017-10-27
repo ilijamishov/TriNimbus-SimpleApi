@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/deployment/app
+cd /home/ubuntu/deployment/app
 
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet restore
