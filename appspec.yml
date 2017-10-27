@@ -14,9 +14,6 @@ hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
   AfterInstall:
-    - location: scripts/after_install.sh
-  ApplicationStart:
+    - location: scripts/restore_and_build.sh
     - location: scripts/db_setup.sh
-      timeout: 180
-    - location: scripts/app_start.sh
-      timeout: 30
+    - location: scripts/publish_and_run.sh

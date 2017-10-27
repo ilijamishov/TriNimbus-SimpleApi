@@ -1,3 +1,8 @@
 #!/bin/bash
+cd ~/deployment/app
 
-echo "before install"
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet restore
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update

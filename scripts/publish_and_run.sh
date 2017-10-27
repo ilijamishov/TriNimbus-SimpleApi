@@ -1,15 +1,7 @@
 #!/bin/bash
 
-while getopts ":h:" opt; do
-  case $opt in
-    h) home_key="$OPTARG"
-    ;;
-    \?) echo "Invalid option -$OPTARG" >&2
-    ;;
-  esac
-done
+cd ~/deployment/app
+dotnet publish --output publish
 
-dotnet restore ~/"$home_key"/
-
-dotnet publish ~/"$home_key"/ --output ~/"$home_key"/PUBLISH
-dotnet ~/"$home_key"/PUBLISH/TriNimbus-SimpleAPI
+cd ~/deployment/app/publish
+sudo dotnet TriNimbus-SimpleAPI
