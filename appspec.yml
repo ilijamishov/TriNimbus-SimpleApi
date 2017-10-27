@@ -12,8 +12,8 @@ files:
     destination: /home/ubuntu/deployment/app
 hooks:
   BeforeInstall:
-    - location: app/scripts/before_install.sh
+    - location: /scripts/before_install.sh
   AfterInstall:
-    - location: app/scripts/restore_and_build.sh
-    - location: app/scripts/db_setup.sh
-    - location: app/scripts/publish_and_run.sh
+    - location: /scripts/restore_and_build.sh
+    - location: /scripts/db_setup.sh
+    - location: /scripts/publish_and_run.sh
