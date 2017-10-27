@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 permissions:
   - object: /home/ubuntu/deployment
-    owner: ubuntu
+    owner: root
     mode: 755
     type:
       - directory
