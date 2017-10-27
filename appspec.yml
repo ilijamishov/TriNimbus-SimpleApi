@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 permissions:
-  - object: /home/ec2-user/app
-    pattern: "*"
+  - object: /home/ec2-user
+    pattern: "/app"
     owner: ec2-user
     mode: 755
 files:
