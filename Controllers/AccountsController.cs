@@ -40,9 +40,7 @@ namespace TriNimbus_SimpleAPI.Controllers
         [HttpPost]
         public void Post([FromBody]Account value)
         {
-            var account = _dbContext.Accounts.First(c => c.Id == value.Id);
-
-            account.Name = value.Name;
+            var account = new TriNimbus_SimpleAPI.Models.Account(){ Name = value.Name};
 
             _dbContext.Accounts.Update(account);
             _dbContext.SaveChanges();
