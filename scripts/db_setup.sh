@@ -1,4 +1,7 @@
 #!/bin/bash
+
+export HOME=/home/ubuntu
+
 cd /home/ubuntu/deployment/app
 
 dotnet add package Microsoft.EntityFrameworkCore.Design
