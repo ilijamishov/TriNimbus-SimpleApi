@@ -30,14 +30,15 @@ namespace TriNimbus_SimpleAPI
         {
             services.AddMvc();
 
-            //var connection = Configuration.GetSection("Data").GetSection("ConnectionString").Value;
+            var connection = Configuration.GetSection("Data").GetSection("ConnectionString").Value;
             var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
             var dbPort = Environment.GetEnvironmentVariable("DB_PORT");
             var dbUser = Environment.GetEnvironmentVariable("DB_USER");
             var dbPass = Environment.GetEnvironmentVariable("DB_PASS");
             var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 
-            var connectionStr = string.Format("Host={0};Port={1};User ID={2};Password={3};Database={4};Pooling=true;", dbHost, dbPort, dbUser, dbPass, dbName);
+            var connectionStr = connection;
+            
             Console.WriteLine();
             Console.Write("DB Conn str: "+ connectionStr);
             Console.WriteLine();

@@ -7,6 +7,9 @@ cd /home/ubuntu/deployment/app
 dotnet restore
 dotnet build
 
+#copy configuration
+cp /home/ubuntu/appsettings.json .
+
 #create the database
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet restore
