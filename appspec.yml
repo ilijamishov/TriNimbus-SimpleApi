@@ -12,9 +12,11 @@ files:
     destination: /home/ubuntu/deployment/app/
 hooks:
   BeforeInstall:
-    - location: scripts/before_install.sh
+    - location: scripts/app_stop.sh
+      runas: root
   AfterInstall:
-    - location: scripts/restore_and_build.sh
-    - location: scripts/db_setup.sh 
+    - location: scripts/app_set.sh
+      runas: ubuntu
   ApplicationStart:
-    - location: scripts/publish_and_run.sh 
+    - location: scripts/app_start.sh
+      runas: root

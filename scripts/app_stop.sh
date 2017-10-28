@@ -1,4 +1,4 @@
 #!/bin/bash
 
-#run the application
+#stop the application
 systemctl start kestrel-app.service
