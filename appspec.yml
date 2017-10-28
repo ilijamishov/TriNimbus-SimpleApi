@@ -15,5 +15,6 @@ hooks:
     - location: scripts/before_install.sh
   AfterInstall:
     - location: scripts/restore_and_build.sh
-    - location: scripts/db_setup.sh
-    - location: scripts/publish_and_run.sh
+    - location: scripts/db_setup.sh 
+  ApplicationStart:
+    - location: scripts/publish_and_run.sh 
